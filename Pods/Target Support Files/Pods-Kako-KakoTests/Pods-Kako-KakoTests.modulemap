@@ -1,0 +1,6 @@
+framework module Pods_Kako_KakoTests {
+  umbrella header "Pods-Kako-KakoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -14,12 +14,13 @@ Pod::Spec.new do |spec|
 
   
   spec.description  = <<-DESC
+   Kako is a network layer to handle service calls using Moya.
                    DESC
 
   spec.homepage     = "https://github.com/guisilvaa/Kako"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
-  spec.license      = "MIT (example)"
+  spec.license      = "MIT"
   
 
   spec.author       = { "Guilherme Silva" => "gui.shevs@gmail.com" }

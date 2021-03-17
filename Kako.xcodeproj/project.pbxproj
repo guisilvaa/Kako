@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		83F5D69A9055032E84F3ED72 /* Pods_Kako.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF2A19D22C3D954686732E9 /* Pods_Kako.framework */; };
 		A6E4A9427DBAD309D5C0EEAB /* Pods_Kako_KakoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28ED8A38C12E0A980E2E241A /* Pods_Kako_KakoTests.framework */; };
+		CF479AF925FA9D7C0023F6C3 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF479AF525FA9D7C0023F6C3 /* EmptyResponse.swift */; };
+		CF479AFA25FA9D7C0023F6C3 /* KakoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF479AF625FA9D7C0023F6C3 /* KakoError.swift */; };
+		CF479AFB25FA9D7C0023F6C3 /* KakoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF479AF725FA9D7C0023F6C3 /* KakoProvider.swift */; };
+		CF479AFC25FA9D7C0023F6C3 /* KakoErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF479AF825FA9D7C0023F6C3 /* KakoErrorType.swift */; };
+		CF479B1825FAB21D0023F6C3 /* KakoManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF479B1725FAB21D0023F6C3 /* KakoManger.swift */; };
 		CFB940B625F1409B00B6873C /* Kako.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB940AC25F1409B00B6873C /* Kako.framework */; };
 		CFB940BB25F1409B00B6873C /* KakoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB940BA25F1409B00B6873C /* KakoTests.swift */; };
 		CFB940BD25F1409B00B6873C /* Kako.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB940AF25F1409B00B6873C /* Kako.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CFB9415125F26AEB00B6873C /* KakoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9415025F26AEB00B6873C /* KakoError.swift */; };
-		CFB9415525F26AFC00B6873C /* KakoErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9415425F26AFC00B6873C /* KakoErrorType.swift */; };
-		CFB9415925F26B0A00B6873C /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9415825F26B0A00B6873C /* EmptyResponse.swift */; };
-		CFB9415D25F26B1C00B6873C /* KakoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9415C25F26B1C00B6873C /* KakoProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,16 +35,17 @@
 		31E48C296BCC4C6C3C8B007A /* Pods-Kako-KakoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kako-KakoTests.debug.xcconfig"; path = "Target Support Files/Pods-Kako-KakoTests/Pods-Kako-KakoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B30193C84F22F54EACEBC7E /* Pods-Kako.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kako.debug.xcconfig"; path = "Target Support Files/Pods-Kako/Pods-Kako.debug.xcconfig"; sourceTree = "<group>"; };
 		AFF2A19D22C3D954686732E9 /* Pods_Kako.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kako.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF479AF525FA9D7C0023F6C3 /* EmptyResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		CF479AF625FA9D7C0023F6C3 /* KakoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakoError.swift; sourceTree = "<group>"; };
+		CF479AF725FA9D7C0023F6C3 /* KakoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakoProvider.swift; sourceTree = "<group>"; };
+		CF479AF825FA9D7C0023F6C3 /* KakoErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakoErrorType.swift; sourceTree = "<group>"; };
+		CF479B1725FAB21D0023F6C3 /* KakoManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakoManger.swift; sourceTree = "<group>"; };
 		CFB940AC25F1409B00B6873C /* Kako.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kako.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB940AF25F1409B00B6873C /* Kako.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kako.h; sourceTree = "<group>"; };
 		CFB940B025F1409B00B6873C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFB940B525F1409B00B6873C /* KakoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB940BA25F1409B00B6873C /* KakoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakoTests.swift; sourceTree = "<group>"; };
 		CFB940BC25F1409B00B6873C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFB9415025F26AEB00B6873C /* KakoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakoError.swift; sourceTree = SOURCE_ROOT; };
-		CFB9415425F26AFC00B6873C /* KakoErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakoErrorType.swift; sourceTree = "<group>"; };
-		CFB9415825F26B0A00B6873C /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
-		CFB9415C25F26B1C00B6873C /* KakoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakoProvider.swift; sourceTree = "<group>"; };
 		ED179A5DB95FA50F33DF968B /* Pods-Kako.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kako.release.xcconfig"; path = "Target Support Files/Pods-Kako/Pods-Kako.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CF479AF425FA9D7C0023F6C3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CF479AF525FA9D7C0023F6C3 /* EmptyResponse.swift */,
+				CF479AF625FA9D7C0023F6C3 /* KakoError.swift */,
+				CF479AF725FA9D7C0023F6C3 /* KakoProvider.swift */,
+				CF479AF825FA9D7C0023F6C3 /* KakoErrorType.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CF479B1625FAB20B0023F6C3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CF479B1725FAB21D0023F6C3 /* KakoManger.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		CFB940A225F1409B00B6873C = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +132,8 @@
 		CFB940AE25F1409B00B6873C /* Kako */ = {
 			isa = PBXGroup;
 			children = (
-				CFB9414F25F26ABD00B6873C /* Service */,
+				CF479B1625FAB20B0023F6C3 /* Manager */,
+				CF479AF425FA9D7C0023F6C3 /* Service */,
 				CFB940AF25F1409B00B6873C /* Kako.h */,
 				CFB940B025F1409B00B6873C /* Info.plist */,
 			);
@@ -125,17 +147,6 @@
 				CFB940BC25F1409B00B6873C /* Info.plist */,
 			);
 			path = KakoTests;
-			sourceTree = "<group>";
-		};
-		CFB9414F25F26ABD00B6873C /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				CFB9415025F26AEB00B6873C /* KakoError.swift */,
-				CFB9415425F26AFC00B6873C /* KakoErrorType.swift */,
-				CFB9415825F26B0A00B6873C /* EmptyResponse.swift */,
-				CFB9415C25F26B1C00B6873C /* KakoProvider.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,10 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB9415925F26B0A00B6873C /* EmptyResponse.swift in Sources */,
-				CFB9415525F26AFC00B6873C /* KakoErrorType.swift in Sources */,
-				CFB9415D25F26B1C00B6873C /* KakoProvider.swift in Sources */,
-				CFB9415125F26AEB00B6873C /* KakoError.swift in Sources */,
+				CF479B1825FAB21D0023F6C3 /* KakoManger.swift in Sources */,
+				CF479AFC25FA9D7C0023F6C3 /* KakoErrorType.swift in Sources */,
+				CF479AFA25FA9D7C0023F6C3 /* KakoError.swift in Sources */,
+				CF479AFB25FA9D7C0023F6C3 /* KakoProvider.swift in Sources */,
+				CF479AF925FA9D7C0023F6C3 /* EmptyResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +486,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Kako/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,6 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Chanandler-Bong.Kako";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -500,6 +514,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Kako/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -508,6 +523,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Chanandler-Bong.Kako";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -15,27 +15,23 @@ public class KakoProvider<Target>: MoyaProvider<Target> where Target: Moya.Targe
     
     private var isRefreshing = false
     
-    var reachability: Reachability!
+    private var reachability: Reachability!
     
     public init() {
+        
         let tokenPlugin = AccessTokenPlugin { (_) -> String in
-            return ""
-            //TODO delegate
-             //AuthenticationManager.shared.accessToken
+            return KakoManager.shared.dataSource.accessToken()
         }
         
         let endpointClosure = { (target: Target) -> Endpoint in
             let defaultEndpoint = MoyaProvider.defaultEndpointMapping(for: target)
-            var header = [String: String]()
-            let language = Locale.current.languageCode ?? ""
-            let version: String = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
+            var headers = [String: String]()
             
-            //TODO delegate
-            header.updateValue(language, forKey: "Accept-Language")
-            header.updateValue(version, forKey: "Version")
-            header.updateValue("1", forKey: "Device")
+            if let customHeaders = KakoManager.shared.dataSource.customHeaders() {
+                customHeaders.forEach { headers.updateValue($0.value, forKey: $0.key) }
+            }
             
-            return defaultEndpoint.adding(newHTTPHeaderFields: header)
+            return defaultEndpoint.adding(newHTTPHeaderFields: headers)
         }
         
         let loggerConfig = NetworkLoggerPlugin.Configuration(logOptions: .verbose)
@@ -58,8 +54,7 @@ public class KakoProvider<Target>: MoyaProvider<Target> where Target: Moya.Targe
     }
     
     private func requestService<T: Mappable>(target: Target, callbackQueue: DispatchQueue? = .none, progress: ProgressBlock? = .none, objectHandler: ((Result<T, KakoError>) -> Void)? = nil, collectionHandler: ((Result<[T], KakoError>) -> Void)? = nil) {
-        
-        if isReachable() {
+        if self.isReachable() {
             
             self.request(target, callbackQueue: callbackQueue, progress: progress, completion: { (result) in
                 switch result {
@@ -111,6 +106,7 @@ public class KakoProvider<Target>: MoyaProvider<Target> where Target: Moya.Targe
     }
     
     private func completionError<T: Mappable>(error: KakoError, objectHandler: ((Result<T, KakoError>) -> Void)? = nil, collectionHandler: ((Result<[T], KakoError>) -> Void)? = nil) {
+        
         if let handler = objectHandler {
             handler(.failure(error))
         }
@@ -119,12 +115,13 @@ public class KakoProvider<Target>: MoyaProvider<Target> where Target: Moya.Targe
         }
     }
     
-    func refreshToken<T: Mappable>(target: Target, objectHandler: ((Result<T, KakoError>) -> Void)? = nil, collectionHandler: ((Result<[T], KakoError>) -> Void)? = nil) {
-        
+    private func refreshToken<T: Mappable>(target: Target, objectHandler: ((Result<T, KakoError>) -> Void)? = nil, collectionHandler: ((Result<[T], KakoError>) -> Void)? = nil) {
+        //TODO
+        /*
         if !isRefreshing {
             self.isRefreshing = true
             
-            /*
+            
             AuthenticationManager.shared.refreshToken(completionHandler: { (result) in
                 
                 self.isRefreshing = false
@@ -146,7 +143,7 @@ public class KakoProvider<Target>: MoyaProvider<Target> where Target: Moya.Targe
                         objectHandler!(.failure(GameficError(error: .unauthorized)))
                     }
                 }
-            })*/
+            })
         }
         else {
             DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300), execute: {
@@ -157,7 +154,7 @@ public class KakoProvider<Target>: MoyaProvider<Target> where Target: Moya.Targe
                     self.requestObject(target: target, completionHandler: handler)
                 }
             })
-        }
+        }*/
     }
     
     func handleErrorResponse(response: Response? = nil, error: MoyaError? = nil) -> KakoError {

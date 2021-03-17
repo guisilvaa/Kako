@@ -9,19 +9,19 @@ import ObjectMapper
 
 public class KakoError: Mappable, Error {
     
-    var code: String?
+    public var code: String?
     
-    var description: String?
+    public var description: String?
     
-    var userMessage: String?
+    public var userMessage: String?
     
-    init(code: String, description: String, userMessage: String) {
+    public init(code: String, description: String, userMessage: String) {
         self.code = code
         self.description = description
         self.userMessage = userMessage
     }
     
-    init(error: KakoErrorType) {
+    public init(error: KakoErrorType) {
         self.code = error.rawValue
         self.description = error.description()
     }

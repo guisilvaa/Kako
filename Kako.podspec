@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "Kako"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of Kako."
+  spec.summary      = "Kako is a network layer."
 
   
   spec.description  = <<-DESC
@@ -25,9 +25,12 @@ Pod::Spec.new do |spec|
 
   spec.author       = { "Guilherme Silva" => "gui.shevs@gmail.com" }
 
-  spec.platform     = :ios, "5.2"
+  spec.platform     = :ios
+  spec.swift_versions = "5.2"
 
   spec.ios.deployment_target = '11.0'
+
+  spec.requires_arc     = true
 
   spec.source       = { :git => "https://github.com/guisilvaa/Kako.git", :tag => "#{spec.version}" }
 

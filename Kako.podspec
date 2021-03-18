@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios, "5.2"
 
-  s.ios.deployment_target = '11.0'
+  spec.ios.deployment_target = '11.0'
 
   spec.source       = { :git => "https://github.com/guisilvaa/Kako.git", :tag => "#{spec.version}" }
 

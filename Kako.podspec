@@ -33,7 +33,7 @@ Pod::Spec.new do |spec|
 
   spec.source_files = "Kako/**/*.{swift}"
 
-  spec.resources = "Kako/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+  #spec.resources = "Kako/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
   spec.exclude_files = "Classes/Exclude"
 
   spec.dependency 'Moya'
